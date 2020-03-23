@@ -9,7 +9,7 @@
 
 <nav class="menu">
                 <ul>
-                    <li><a href ="#">Page d'accueil</a></li>
+                    <li><a href ="index.php?page=accueil">Page d'accueil</a></li>
                     <li><a href ="index.php?page=entree">Les entrées</a>
                         <ul class="sous-menu">
                             <li><a href ="index.php?page=entree1">Entrée 1</a></li>
