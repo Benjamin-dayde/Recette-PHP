@@ -1,6 +1,6 @@
 <?php
 
-    var_dump($_GET);
+    //var_dump($_GET);
 
 $page = (isset($_GET["page"]))? $_GET["page"] : "accueil";
 
