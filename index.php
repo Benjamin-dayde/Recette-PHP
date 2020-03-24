@@ -11,15 +11,15 @@ switch ($page) {
     break;
 
     case "entree":
-        $input = "recettes/entree.html";
+        $input = "recettes/entree.php";
     break;
 
     case "plat":
-        $input = "recettes/plat.html";
+        $input = "recettes/plat.php";
     break;
 
     case "dessert":
-        $input = "recettes/dessert.html";
+        $input = "recettes/dessert.php";
     break;
 
     default:

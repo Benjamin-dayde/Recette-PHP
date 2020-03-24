@@ -1,8 +1,6 @@
 <?php
 
 require "recettes.php";
-//var_dump($recette_test);
-//$recette = $recette_test;
 
 $lon = sizeof($grdtab);
 
@@ -73,6 +71,11 @@ for ($i = 0 ; $i < $lon ; $i++) {
             </ol>
         </div>
     </section>";
+};
+
+foreach ($grdtab as $recette) {
+  
+    var_dump($recette);
 };
 
 
