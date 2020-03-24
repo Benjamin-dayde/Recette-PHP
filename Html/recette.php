@@ -2,88 +2,90 @@
 
 require "recettes.php";
 //var_dump($recette_test);
-$recette = $recette_test;
+//$recette = $recette_test;
 
-$length = sizeof($grdtab);
+$lon = sizeof($grdtab);
 
-for ($i ; $i < $length ; $i++) {
-    $grdtab = 
-}
+$titre = "";
+$image = "";
+$temps = "";
+$personnes = "";
+$difficulte = "";
+$cout = "";
+$ingredients = "";
+$etapes = "";
+$html = "";
+
+for ($i = 0 ; $i < $lon ; $i++) {
+    $titre = $grdtab[$i]["titre"];
+    $image = $grdtab[$i]["image"];
+    $temps = $grdtab[$i]["temps"];
+    $personnes = $grdtab[$i]["personnes"];
+    $difficulte = $grdtab[$i]["difficulte"];
+    $cout = $grdtab[$i]["cout"];
+    $ingredients = $grdtab[$i]["ingredients"];
+    $etapes = $grdtab[$i]["etapes"];
+
+    $inter = explode("///", $ingredients);
+    $inter2 = explode("///", $etapes);
+
+    $html .= 
+    
+    "<h1>$titre</h1>
+        
+    <div class=illustration img-block><a href=entree1.html><img src=img/$image alt=Illustration de la recette>
+    </a></div>
+    
+    <section class=row bg-light>
+        <div class=col-6>
+            <table>
+                <tr>
+                    <th>Temps de préparation</th>
+                    <th>Personnes</th>
+                    <th>Difficulté</th>
+                    <th>Coût</th>
+                </tr>
+                <tr>
+                    <td>$temps</td>
+                    <td>$personnes</td>
+                    <td>$difficulte</td>
+                    <td>$cout</td>
+                </tr>
+            </table>
+    
+            <h2>Ingrédients</h2>
+             
+            <ul>
+                <li>$inter[0]</li>
+                <li>$inter[1]</li>
+                <li>$inter[2]</li>
+                <li>$inter[3]</li>
+                <li>$inter[4]</li>
+            </ul>
+        </div>
+    
+        <div class=col-6>
+            <h2>Etapes</h2>
+            <ol>
+            <li>$inter2[0]</li>
+            <li>$inter2[1]</li>
+            <li>$inter2[2]</li>
+            </ol>
+        </div>
+    </section>";
+};
 
 
 ?>
 
-<h1><?= $recette["titre"]?></h1>
-        
-<div class="illustration img-block"><a href="entree1.html"><img src="img/<?= $recette["image"] ?>" alt="Illustration de la recette <?= $recette["titre"] ?>">
-</a></div>
-
-<section class="row bg-light">
-    <div class="col-6">
-        <table>
-            <tr>
-                <th>Temps de préparation</th>
-                <th>Personnes</th>
-                <th>Difficulté</th>
-                <th>Coût</th>
-            </tr>
-            <tr>
-                <td><?= $recette["temps"] ?></td>
-                <td><?= $recette["personnes"] ?></td>
-                <td><?= $recette["difficulte"] ?></td>
-                <td><?= $recette["cout"] ?></td>
-            </tr>
-        </table>
-
-        <h2>Ingrédients</h2>
-        <?= $recette["ingredients"] ?>
-        <!--<ul>
-            <li>1 paquet de pâtes de lasagnes</li>
-            <li>3 oignons jaunes </li>
-            <li>3 gousses d'ail</li>
-            <li>1 branche de céleri</li>
-            <li>1 carotte</li>
-            <li>etc ...</li> -->
-        </ul>
-    </div>
-
-    <div class="col-6">
-        <h2>Etapes</h2>
-        <?= $recette["etapes"] ?>
-        <!--<ol>
-            <li>Faire revenir gousses hachées d'ail et les oignons émincés dans un peu d'huile d'olive.</li>
-            <li> Ajouter la carotte et la branche de céleri hachée puis la viande et faire revenir le tout.</li>
-            <li>Au bout de quelques minutes, ajouter le vin rouge. Laisser cuire jusqu'à évaporation.</li>
-        </ol> -->
-    </div>
-</section>
-<hr>
-<section>
-    <h2>Commentaires</h2>
-    <form action="../../index.html" method="post">
-        <p>
-            <label for="nom">Votre nom</label>
-            <input type="text" id="nom" name="nom" placeholder="Votre nom">
-        </p>
-        <p>Note /5 : 
-            <label for="rad0">0</label>
-            <input type="radio" id="rad0" name="nom" value="0">
-            <label for="rad1">1</label>
-            <input type="radio" id="rad1" name="nom" value="1">
-            <label for="rad2">2</label>
-            <input type="radio" id="rad2" name="nom" value="2">
-            <label for="rad3">3</label>
-            <input type="radio" id="rad3" name="nom" value="3">
-            <label for="rad4">4</label>
-            <input type="radio" id="rad4" name="nom" value="4">
-            <label for="rad5">5</label>
-            <input type="radio" id="rad5" name="nom" value="5">
-        </p>
-        <p> 
-            <label for="comment">Laissez-nous un commentaire</label><br>
-            <textarea id="comment" rows="5" cols="40"></textarea>
-        </p>
-        <p><input type="submit" value="Envoyer">
-        </p>
-    </form>
-</section>
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <title>Plat 1</title>
+        <meta charset="utf-8">
+         <link rel="stylesheet" type="text/css" href="../../css/style.css">
+    </head>
+<body>
+    <?= $html ?>
+</body>
+</html>
