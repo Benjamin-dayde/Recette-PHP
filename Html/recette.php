@@ -1,8 +1,11 @@
 <?php
 
 require "recettes.php";
-var_dump($recette_test);
+//var_dump($recette_test);
 $recette = $recette_test
+
+
+
 
 ?>
 
@@ -21,10 +24,10 @@ $recette = $recette_test
                 <th>Coût</th>
             </tr>
             <tr>
-                <td><? $recette["temps"] ?></td>
-                <td><? $recette["personnes"] ?></td>
-                <td><? $recette["difficulte"] ?></td>
-                <td><? $recette["cout"] ?></td>
+                <td><?= $recette["temps"] ?></td>
+                <td><?= $recette["personnes"] ?></td>
+                <td><?= $recette["difficulte"] ?></td>
+                <td><?= $recette["cout"] ?></td>
             </tr>
         </table>
 
