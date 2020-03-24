@@ -2,12 +2,12 @@
 
 require "recettes.php";
 //var_dump($recette_test);
-$recette = $grdtab;
+$recette = $recette_test;
 
 $length = sizeof($grdtab);
 
 for ($i ; $i < $length ; $i++) {
-    
+    $grdtab = 
 }
 
 
