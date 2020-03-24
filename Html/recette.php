@@ -2,9 +2,13 @@
 
 require "recettes.php";
 //var_dump($recette_test);
-$recette = $recette_test
+$recette = $grdtab;
 
+$length = sizeof($grdtab);
 
+for ($i ; $i < $length ; $i++) {
+    
+}
 
 
 ?>
