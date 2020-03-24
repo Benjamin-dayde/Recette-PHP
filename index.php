@@ -44,7 +44,7 @@ switch ($page) {
         </header>
         
         <?php require $input ?>
-        <?php require "recette.php" ?>
+        <?php require "Html/recette.php" ?>
 
     </body>
 
