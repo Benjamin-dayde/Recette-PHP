@@ -7,7 +7,7 @@ $page = (isset($_GET["page"]))? $_GET["page"] : "accueil";
 
 switch ($page) {
     case "accueil":
-        $input = "recettes/home.html";
+        $input = "recettes/home.php";
     break;
 
     case "entree":

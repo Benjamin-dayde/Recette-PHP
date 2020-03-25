@@ -4,12 +4,12 @@
 
 $nom = $_POST["nom"];
 $email = $_POST["email"];
-
-$checkbox = isset($_POST["checkbox"])? "a que couteaux" : "";
-$checkbox2 = isset($_POST["checkbox2"])? "a que fourchette" : "";
+$checkbox = isset($_POST["checkbox"])? "a que couteaux" : "et pourquoi pas la fourchette";
+$checkbox2 = isset($_POST["checkbox2"])? "a que fourchette" : "et pourquoi pas le couteaux";
 $ustensile = $_POST["ustensile"];
 $notes = $_POST["notes"];
 $commentaire = $_POST["commentaire"];
+$newletter = isset($_POST["newletter"])? "Vous serai parmis nos membre de la newsletter" : "vous ne serai pas membre (ingrat)";
 
 
 
@@ -55,6 +55,7 @@ $commentaire = $_POST["commentaire"];
                         <option value="cuillere">cuillère</option>
                         <option value="rouleaux">rouleaux</option>
                         <option value="marteaux">marteaux</option>
+                    </select>
                 </p>
 
 
@@ -72,6 +73,12 @@ $commentaire = $_POST["commentaire"];
                     <label for="rad5">5</label>
                     <input type="radio" id="rad5" name="notes" value="5">
                 </p>
+
+                <p>
+                    <input type="checkbox" id="newletter" name="newletter" >
+                    <label for="newletter">Cliquer ici pour recevoir la newsletter</label>
+                </p>
+
                 <p> 
                     <label for="comment">Laissez-nous un commentaire</label><br>
                     <textarea name="commentaire" id="comment" rows="5" cols="40"></textarea>
@@ -91,17 +98,19 @@ $commentaire = $_POST["commentaire"];
                 <th>Ustensile</th>
                 <th>Notes</th>
                 <th>Commentaire</th>
+                <th>newsletter</th>
             </tr>
 
             <tr>
 
-            <td><?= $nom  ?></td>
-            <td><?= $email ?></td>
-            <td><?= $checkbox  ?></td>
-            <td><?= $checkbox2  ?></td>
-            <td><?= $ustensile ?></td>
-            <td><?= $notes ?></td>
-            <td><?= $commentaire ?></td>
+                <td><?= $nom  ?></td>
+                <td><?= $email ?></td>
+                <td><?= $checkbox  ?></td>
+                <td><?= $checkbox2  ?></td>
+                <td><?= $ustensile ?></td>
+                <td><?= $notes ?></td>
+                <td><?= $commentaire ?></td>
+                <td><?= $newletter ?></td>
 
             </tr>
                 

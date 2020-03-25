@@ -73,10 +73,7 @@ for ($i = 0 ; $i < $lon ; $i++) {
     </section>";
 };
 
-foreach ($grdtab as $recette) {
-  
-    var_dump($recette);
-};
+
 
 
 ?>
