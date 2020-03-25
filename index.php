@@ -45,6 +45,7 @@ switch ($page) {
         
         <?php require $input ?>
         <?php require "Html/recette.php" ?>
+        <?php require "formulaire.php" ?>
 
     </body>
 
